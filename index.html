@@ -1,205 +1,369 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>H.Scent - Luxury Perfumes</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>H.Scent | Luxury Perfumes</title>
 
     <style>
+
         * {
             box-sizing: border-box;
-        }
-
-        body {
-            background-color: #111;
-            color: white;
-            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #0b0b0b;
+            color: white;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* ================= HEADER ================= */
+
         .brand-header {
+            background: #050505;
             text-align: center;
-            padding: 25px 20px;
-            background: #000;
-            border-bottom: 2px solid #d4af37;
+            padding: 28px 15px 22px;
+            border-bottom: 1px solid #d4af37;
         }
 
         .logo {
-            width: 90px;
+            width: 120px;
             height: auto;
             display: block;
-            margin: 0 auto 10px;
+            margin: 0 auto 12px;
         }
 
-        .brand-header h1 {
+        .brand-name {
             color: #d4af37;
-            font-size: 38px;
+            font-size: 34px;
+            font-weight: bold;
             letter-spacing: 7px;
-            margin: 5px 0;
+            margin-bottom: 3px;
         }
 
-        .brand-header p {
-            color: white;
-            font-size: 14px;
-            letter-spacing: 3px;
-            margin: 5px 0;
+        .brand-subtitle {
+            color: #ffffff;
+            font-size: 12px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
         }
+
+        /* ================= NAVIGATION ================= */
 
         nav {
-            background-color: black;
-            padding: 18px;
+            background: #080808;
+            padding: 15px 10px;
             text-align: center;
-            border-bottom: 1px solid #d4af37;
+            border-bottom: 1px solid #3d3215;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         nav a {
             color: #d4af37;
             text-decoration: none;
-            margin: 0 15px;
+            margin: 0 18px;
+            font-size: 14px;
             font-weight: bold;
+            transition: 0.3s;
         }
 
+        nav a:hover {
+            color: white;
+        }
+
+        /* ================= HERO ================= */
+
         .hero {
+            min-height: 520px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            padding: 60px 20px;
-            background: linear-gradient(135deg, #111, #1c1c1c);
+            padding: 70px 20px;
+            background:
+                radial-gradient(circle at center, #25200f 0%, #111 35%, #080808 75%);
+            border-bottom: 1px solid #2f2815;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero-small {
+            color: #d4af37;
+            font-size: 13px;
+            letter-spacing: 5px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-transform: uppercase;
         }
 
         .hero h1 {
             color: #d4af37;
-            font-size: 48px;
-            margin: 0;
-            letter-spacing: 5px;
+            font-size: 64px;
+            letter-spacing: 10px;
+            margin-bottom: 15px;
         }
 
         .hero p {
-            color: white;
+            color: #eeeeee;
             font-size: 18px;
-            margin: 15px 0;
+            margin-bottom: 12px;
         }
 
         .hero-tagline {
-            color: #d4af37;
-            font-size: 14px;
+            color: #d4af37 !important;
+            font-size: 14px !important;
             letter-spacing: 4px;
             font-weight: bold;
-            margin-bottom: 25px;
+            margin-bottom: 30px !important;
         }
 
         .hero-btn {
             display: inline-block;
+            background: linear-gradient(135deg, #d4af37, #f3d36a);
+            color: #080808;
+            padding: 14px 32px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 15px;
+            box-shadow: 0 8px 25px rgba(212,175,55,0.25);
+            transition: 0.3s;
+        }
+
+        .hero-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(212,175,55,0.4);
+        }
+
+        /* ================= CONTAINER ================= */
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        .section-label {
+            color: #d4af37;
+            font-size: 12px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            color: white;
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .gold-line {
+            width: 70px;
+            height: 2px;
             background: #d4af37;
-            color: #000;
-            padding: 13px 30px;
-            border-radius: 8px;
+            margin: 0 auto 45px;
+        }
+
+        .about-text {
+            max-width: 700px;
+            margin: 0 auto 70px;
+            color: #cfcfcf;
+            font-size: 16px;
+        }
+
+        /* ================= PERFUMES ================= */
+
+        .perfume-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .perfume {
+            background: linear-gradient(145deg, #181818, #0f0f0f);
+            border: 1px solid #4c3d17;
+            border-radius: 18px;
+            padding: 25px;
+            transition: 0.35s;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+        }
+
+        .perfume:hover {
+            transform: translateY(-8px);
+            border-color: #d4af37;
+            box-shadow: 0 18px 40px rgba(212,175,55,0.12);
+        }
+
+        .perfume img {
+            width: 240px;
+            height: 240px;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto 22px;
+            border-radius: 14px;
+            border: 1px solid #3c3218;
+        }
+
+        .perfume h3 {
+            color: #d4af37;
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        .perfume-description {
+            color: #c8c8c8;
+            font-size: 14px;
+            min-height: 48px;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .price span {
+            color: #d4af37;
+        }
+
+        .order-btn {
+            display: inline-block;
+            background: #d4af37;
+            color: #050505;
+            padding: 12px 28px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .order-btn:hover {
+            background: #f3d36a;
+            transform: scale(1.04);
+        }
+
+        /* ================= CONTACT ================= */
+
+        .contact {
+            max-width: 850px;
+            margin: 20px auto 70px;
+            padding: 55px 25px;
+            text-align: center;
+            background:
+                linear-gradient(145deg, #191919, #0d0d0d);
+            border: 1px solid #4c3d17;
+            border-radius: 20px;
+        }
+
+        .contact h2 {
+            color: #d4af37;
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .contact p {
+            color: #cccccc;
+            margin-bottom: 25px;
+        }
+
+        .whatsapp-btn {
+            display: inline-block;
+            background: #d4af37;
+            color: #050505;
+            padding: 14px 30px;
+            border-radius: 30px;
             text-decoration: none;
             font-weight: bold;
         }
 
-        .container {
-            max-width: 1000px;
-            margin: auto;
-            padding: 30px;
-            text-align: center;
-        }
-
-        h1, h2, h3 {
-            color: #d4af37;
-        }
-
-        h2 {
-            margin-top: 40px;
-        }
-
-        .perfume {
-            background-color: #1c1c1c;
-            border: 1px solid #d4af37;
-            border-radius: 15px;
-            padding: 25px;
-            margin: 30px auto;
-            max-width: 400px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-        }
-
-        .perfume img {
-            width: 250px;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 12px;
-            margin: 15px auto;
-            display: block;
-        }
-
-        h3 {
-            font-size: 25px;
-        }
-
-        .price {
-            color: #d4af37;
-            font-size: 22px;
-            font-weight: bold;
-        }
-
-        button {
-            background-color: #d4af37;
-            color: black;
-            padding: 13px 30px;
-            border: none;
-            border-radius: 8px;
-            font-weight: bold;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #f1cf55;
-        }
-
-        .contact {
-            text-align: center;
-            background: #1c1c1c;
-            border: 1px solid #d4af37;
-            border-radius: 15px;
-            padding: 30px;
-            margin: 40px auto;
-            max-width: 700px;
-        }
-
-        .contact p {
-            color: white;
-            font-size: 16px;
-        }
+        /* ================= FOOTER ================= */
 
         footer {
-            background-color: #000;
-            padding: 30px 20px;
+            background: #050505;
             text-align: center;
+            padding: 30px 15px;
+            border-top: 1px solid #3d3215;
+        }
+
+        footer .footer-name {
             color: #d4af37;
-            margin-top: 50px;
-            border-top: 1px solid #d4af37;
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 4px;
+            margin-bottom: 6px;
         }
 
         footer p {
-            margin: 6px 0;
-            color: white;
+            color: #888;
+            font-size: 13px;
         }
 
-        @media (max-width: 600px) {
-            .container {
-                padding: 15px;
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 700px) {
+
+            .logo {
+                width: 120px;
             }
 
-            nav {
-                padding: 12px 5px;
+            .brand-name {
+                font-size: 28px;
+                letter-spacing: 5px;
             }
 
             nav a {
-                margin: 0 6px;
-                font-size: 13px;
+                margin: 0 7px;
+                font-size: 12px;
+            }
+
+            .hero {
+                min-height: 450px;
+                padding: 60px 15px;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+                letter-spacing: 6px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .hero-tagline {
+                font-size: 12px !important;
+                letter-spacing: 2px;
+            }
+
+            .section-title {
+                font-size: 30px;
+            }
+
+            .perfume-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
             }
 
             .perfume {
-                margin: 20px 5px;
-                padding: 18px;
+                padding: 20px;
             }
 
             .perfume img {
@@ -207,123 +371,270 @@
                 height: 220px;
             }
 
-            .brand-header h1 {
-                font-size: 28px;
-                letter-spacing: 4px;
-            }
-
-            .logo {
-    width: 120px;
-    height: auto;
-    display: block;
-    margin: 0 auto 10px;
-}
-            .hero h1 {
-                font-size: 35px;
+            .container {
+                padding: 55px 15px;
             }
         }
+
     </style>
 </head>
 
 <body>
 
-<header class="brand-header">
-    <img class="logo" src="LOGO.jpeg">
-    <h1>H.SCENT</h1>
-    <p>Luxury Fragrances</p>
-</header>
+    <!-- HEADER -->
 
-<nav>
-    <a href="#">Home</a>
-    <a href="#about">About</a>
-    <a href="#perfumes">Perfumes</a>
-    <a href="#contact">Contact</a>
-</nav>
+    <header class="brand-header">
 
-<section class="hero">
-    <h1>H.SCENT</h1>
-    <p>Luxury Fragrances Crafted to Leave an Impression.</p>
-    <p class="hero-tagline">Luxury • Elegance • Confidence</p>
-    <a href="#perfumes" class="hero-btn">Explore Perfumes</a>
-</section>
+        <img class="logo" src="LOGO.jpeg" alt="H.Scent Logo">
 
-<div class="container">
+        <div class="brand-name">
+            H.SCENT
+        </div>
 
-    <h1>Welcome to H.Scent</h1>
+        <div class="brand-subtitle">
+            Luxury Fragrances
+        </div>
 
-    <h2 id="about">About H.Scent</h2>
-    <p>
-        Discover premium fragrances crafted to leave a lasting impression.
-    </p>
+    </header>
 
-    <h2 id="perfumes">Our Perfumes</h2>
 
-    <div class="perfume">
-        <h3>Bloom Whisper</h3>
+    <!-- NAVIGATION -->
 
-        <img src="bloom .jpg.jpeg">
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#perfumes">Perfumes</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-        <p>Fresh, feminine and unforgettable fragrance.</p>
-        <p class="price">Price: Rs. 2,500</p>
 
-        <a href="https://wa.me/923357654140?text=Hello%20H.Scent,%20I%20want%20to%20order%20Bloom%20Whisper" target="_blank">
-            <button>Order Now</button>
-        </a>
-    </div>
+    <!-- HERO -->
 
-    <div class="perfume">
-        <h3>Moon Blossom</h3>
+    <section class="hero" id="home">
 
-        <img src="MOON BLOSSOM.jpeg">
+        <div class="hero-content">
 
-        <p>Bold, mysterious and unforgettable fragrance.</p>
-        <p class="price">Price: Rs. 2,500</p>
+            <div class="hero-small">
+                H.Scent Collection
+            </div>
 
-        <a href="https://wa.me/923357654140?text=Hello%20H.Scent,%20I%20want%20to%20order%20Moon%20Blossom" target="_blank">
-            <button>Order Now</button>
-        </a>
-    </div>
+            <h1>H.SCENT</h1>
 
-    <div class="perfume">
-        <h3>Black Legacy</h3>
+            <p>
+                Luxury Fragrances Crafted to Leave an Impression.
+            </p>
 
-        <img src="BLACK.jpeg">
+            <p class="hero-tagline">
+                LUXURY • ELEGANCE • CONFIDENCE
+            </p>
 
-        <p>Woody, spicy, aromatic and masculine fragrance.</p>
-        <p class="price">Price: Rs. 1,500</p>
+            <a href="#perfumes" class="hero-btn">
+                Explore Collection
+            </a>
 
-        <a href="https://wa.me/923357654140?text=Hello%20H.Scent,%20I%20want%20to%20order%20Black%20Legacy" target="_blank">
-            <button>Order Now</button>
-        </a>
-    </div>
+        </div>
 
-    <div class="perfume">
-        <h3>Dark Desire</h3>
-
-        <img src="DARK.jpeg">
-
-        <p>Woody, spicy, aromatic and masculine fragrance.</p>
-        <p class="price">Price: Rs. 1,500</p>
-
-        <a href="https://wa.me/923357654140?text=Hello%20H.Scent,%20I%20want%20to%20order%20Dark%20Desire" target="_blank">
-            <button>Order Now</button>
-        </a>
-    </div>
-
-    <section class="contact" id="contact">
-        <h2>Contact H.Scent</h2>
-        <p>Order your favourite fragrance directly on WhatsApp.</p>
-
-        <a href="https://wa.me/923357654140?text=Hello%20H.Scent,%20I%20want%20to%20place%20an%20order" target="_blank">
-            <button>Contact Us on WhatsApp</button>
-        </a>
     </section>
 
-</div>
 
-<footer>
-    © 2026 H.Scent — Luxury Fragrances
-</footer>
+    <!-- MAIN -->
+
+    <main class="container">
+
+        <!-- ABOUT -->
+
+        <section id="about">
+
+            <div class="section-label">
+                The H.Scent Experience
+            </div>
+
+            <h2 class="section-title">
+                Welcome to H.Scent
+            </h2>
+
+            <div class="gold-line"></div>
+
+            <p class="about-text">
+                Discover premium fragrances crafted for those who appreciate
+                luxury, elegance and confidence. Every H.Scent fragrance is
+                designed to leave a memorable impression.
+            </p>
+
+        </section>
+
+
+        <!-- PERFUMES -->
+
+        <section id="perfumes">
+
+            <div class="section-label">
+                Our Collection
+            </div>
+
+            <h2 class="section-title">
+                Signature Perfumes
+            </h2>
+
+            <div class="gold-line"></div>
+
+
+            <div class="perfume-grid">
+
+
+                <!-- BLOOM WHISPER -->
+
+                <div class="perfume">
+
+                    <img src="bloom .jpg.jpeg" alt="Bloom Whisper">
+
+                    <h3>
+                        Bloom Whisper
+                    </h3>
+
+                    <p class="perfume-description">
+                        Fresh, feminine and unforgettable fragrance.
+                    </p>
+
+                    <p class="price">
+                        <span>Rs.</span> 2,500
+                    </p>
+
+                    <a
+                        class="order-btn"
+                        href="https://wa.me/923357654140?text=Hello%20H.Scent,%20I%20want%20to%20order%20Bloom%20Whisper"
+                        target="_blank">
+                        Order Now
+                    </a>
+
+                </div>
+
+
+                <!-- MOON BLOSSOM -->
+
+                <div class="perfume">
+
+                    <img src="MOON BLOSSOM.jpeg" alt="Moon Blossom">
+
+                    <h3>
+                        Moon Blossom
+                    </h3>
+
+                    <p class="perfume-description">
+                        Bold, mysterious and unforgettable fragrance.
+                    </p>
+
+                    <p class="price">
+                        <span>Rs.</span> 2,500
+                    </p>
+
+                    <a
+                        class="order-btn"
+                        href="https://wa.me/923357654140?text=Hello%20H.Scent,%20I%20want%20to%20order%20Moon%20Blossom"
+                        target="_blank">
+                        Order Now
+                    </a>
+
+                </div>
+
+
+                <!-- BLACK LEGACY -->
+
+                <div class="perfume">
+
+                    <img src="BLACK.jpeg" alt="Black Legacy">
+
+                    <h3>
+                        Black Legacy
+                    </h3>
+
+                    <p class="perfume-description">
+                        Woody, spicy, aromatic and masculine fragrance.
+                    </p>
+
+                    <p class="price">
+                        <span>Rs.</span> 1,500
+                    </p>
+
+                    <a
+                        class="order-btn"
+                        href="https://wa.me/923357654140?text=Hello%20H.Scent,%20I%20want%20to%20order%20Black%20Legacy"
+                        target="_blank">
+                        Order Now
+                    </a>
+
+                </div>
+
+
+                <!-- DARK DESIRE -->
+
+                <div class="perfume">
+
+                    <img src="DARK.jpeg" alt="Dark Desire">
+
+                    <h3>
+                        Dark Desire
+                    </h3>
+
+                    <p class="perfume-description">
+                        Woody, spicy, aromatic and masculine fragrance.
+                    </p>
+
+                    <p class="price">
+                        <span>Rs.</span> 1,500
+                    </p>
+
+                    <a
+                        class="order-btn"
+                        href="https://wa.me/923357654140?text=Hello%20H.Scent,%20I%20want%20to%20order%20Dark%20Desire"
+                        target="_blank">
+                        Order Now
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- CONTACT -->
+
+    <section class="contact" id="contact">
+
+        <h2>
+            Contact H.Scent
+        </h2>
+
+        <p>
+            Ready to find your signature fragrance?
+            Order directly through WhatsApp.
+        </p>
+
+        <a
+            class="whatsapp-btn"
+            href="https://wa.me/923357654140?text=Hello%20H.Scent,%20I%20want%20to%20place%20an%20order"
+            target="_blank">
+            Order on WhatsApp
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-name">
+            H.SCENT
+        </div>
+
+        <p>
+            © 2026 H.Scent — Luxury Fragrances
+        </p>
+
+    </footer>
 
 </body>
-</html>
