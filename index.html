@@ -19,8 +19,8 @@
         }
 
         body {
-            background: #0b0b0b;
-            color: white;
+            background: #080808;
+            color: #fff;
             font-family: Arial, sans-serif;
             line-height: 1.6;
         }
@@ -30,7 +30,7 @@
         .brand-header {
             background: #050505;
             text-align: center;
-            padding: 28px 15px 22px;
+            padding: 30px 15px 24px;
             border-bottom: 1px solid #d4af37;
         }
 
@@ -41,26 +41,19 @@
             margin: 0 auto 12px;
         }
 
-        .brand-name {
-            color: #d4af37;
-            font-size: 34px;
-            font-weight: bold;
-            letter-spacing: 7px;
-            margin-bottom: 3px;
-        }
-
         .brand-subtitle {
-            color: #ffffff;
+            color: #d4af37;
             font-size: 12px;
-            letter-spacing: 4px;
+            letter-spacing: 5px;
             text-transform: uppercase;
+            font-weight: bold;
         }
 
         /* ================= NAVIGATION ================= */
 
         nav {
-            background: #080808;
-            padding: 15px 10px;
+            background: #0b0b0b;
+            padding: 16px 10px;
             text-align: center;
             border-bottom: 1px solid #3d3215;
             position: sticky;
@@ -71,67 +64,89 @@
         nav a {
             color: #d4af37;
             text-decoration: none;
-            margin: 0 18px;
+            margin: 0 20px;
             font-size: 14px;
             font-weight: bold;
+            letter-spacing: 1px;
             transition: 0.3s;
         }
 
         nav a:hover {
-            color: white;
+            color: #fff;
         }
 
         /* ================= HERO ================= */
-.hero {
-    text-align: center;
-    padding: 90px 20px;
-    background: linear-gradient(135deg, #0b0b0b, #1b1b1b);
-}
 
-.hero h1 {
-    color: #d4af37;
-    font-size: 46px;
-    margin: 0 0 18px;
-    letter-spacing: 2px;
-}
+        .hero {
+            min-height: 520px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 80px 20px;
+            background:
+                radial-gradient(circle at center, #202020 0%, #0b0b0b 55%, #050505 100%);
+        }
 
-.hero p {
-    color: #eee;
-    font-size: 17px;
-    margin: 10px 0;
-}
+        .hero-content {
+            max-width: 850px;
+        }
 
-.hero-tagline {
-    color: #d4af37 !important;
-    font-size: 13px !important;
-    letter-spacing: 4px;
-    font-weight: bold;
-    margin: 22px 0 30px !important;
-}
+        .hero-small {
+            color: #d4af37;
+            font-size: 12px;
+            letter-spacing: 6px;
+            font-weight: bold;
+            margin-bottom: 18px;
+            text-transform: uppercase;
+        }
 
-.hero-btn {
-    display: inline-block;
-    background: #d4af37;
-    color: #111;
-    padding: 14px 32px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
+        .hero h1 {
+            color: #d4af37;
+            font-size: 54px;
+            line-height: 1.15;
+            letter-spacing: 2px;
+            margin-bottom: 22px;
+        }
 
-.hero-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(212,175,55,0.3);
-}
-         
+        .hero p {
+            color: #eeeeee;
+            font-size: 17px;
+            margin-bottom: 12px;
+        }
 
-        /* ================= CONTAINER ================= */
+        .hero-tagline {
+            color: #d4af37 !important;
+            font-size: 13px !important;
+            letter-spacing: 4px;
+            font-weight: bold;
+            margin: 22px 0 32px !important;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            background: #d4af37;
+            color: #080808;
+            padding: 14px 34px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .hero-btn:hover {
+            background: #f1d36a;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(212,175,55,0.25);
+        }
+
+        /* ================= MAIN ================= */
 
         .container {
             max-width: 1100px;
             margin: auto;
-            padding: 70px 20px;
+            padding: 80px 20px;
             text-align: center;
         }
 
@@ -141,26 +156,26 @@
             letter-spacing: 4px;
             text-transform: uppercase;
             font-weight: bold;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
         .section-title {
-            color: white;
+            color: #fff;
             font-size: 36px;
-            margin-bottom: 15px;
+            margin-bottom: 18px;
         }
 
         .gold-line {
-            width: 70px;
+            width: 65px;
             height: 2px;
             background: #d4af37;
-            margin: 0 auto 45px;
+            margin: 0 auto 40px;
         }
 
         .about-text {
-            max-width: 700px;
-            margin: 0 auto 70px;
-            color: #cfcfcf;
+            max-width: 720px;
+            margin: 0 auto 85px;
+            color: #c8c8c8;
             font-size: 16px;
         }
 
@@ -175,16 +190,16 @@
         }
 
         .perfume {
-            background: linear-gradient(145deg, #181818, #0f0f0f);
-            border: 1px solid #4c3d17;
+            background: linear-gradient(145deg, #1b1b1b, #0d0d0d);
+            border: 1px solid #403515;
             border-radius: 18px;
-            padding: 25px;
+            padding: 28px 22px;
             transition: 0.35s;
             box-shadow: 0 12px 30px rgba(0,0,0,0.35);
         }
 
         .perfume:hover {
-            transform: translateY(-8px);
+            transform: translateY(-7px);
             border-color: #d4af37;
             box-shadow: 0 18px 40px rgba(212,175,55,0.12);
         }
@@ -196,7 +211,7 @@
             display: block;
             margin: 0 auto 22px;
             border-radius: 14px;
-            border: 1px solid #3c3218;
+            border: 1px solid #403515;
         }
 
         .perfume h3 {
@@ -213,7 +228,7 @@
         }
 
         .price {
-            color: white;
+            color: #fff;
             font-size: 20px;
             font-weight: bold;
             margin-bottom: 20px;
@@ -235,7 +250,7 @@
         }
 
         .order-btn:hover {
-            background: #f3d36a;
+            background: #f1d36a;
             transform: scale(1.04);
         }
 
@@ -243,12 +258,11 @@
 
         .contact {
             max-width: 850px;
-            margin: 20px auto 70px;
-            padding: 55px 25px;
+            margin: 0 auto 80px;
+            padding: 60px 25px;
             text-align: center;
-            background:
-                linear-gradient(145deg, #191919, #0d0d0d);
-            border: 1px solid #4c3d17;
+            background: linear-gradient(145deg, #191919, #0d0d0d);
+            border: 1px solid #403515;
             border-radius: 20px;
         }
 
@@ -260,17 +274,21 @@
 
         .contact p {
             color: #cccccc;
-            margin-bottom: 25px;
+            margin-bottom: 28px;
         }
 
         .whatsapp-btn {
             display: inline-block;
             background: #d4af37;
             color: #050505;
-            padding: 14px 30px;
+            padding: 14px 32px;
             border-radius: 30px;
             text-decoration: none;
             font-weight: bold;
+        }
+
+        .whatsapp-btn:hover {
+            background: #f1d36a;
         }
 
         /* ================= FOOTER ================= */
@@ -278,20 +296,20 @@
         footer {
             background: #050505;
             text-align: center;
-            padding: 30px 15px;
+            padding: 32px 15px;
             border-top: 1px solid #3d3215;
         }
 
         footer .footer-name {
             color: #d4af37;
-            font-size: 20px;
+            font-size: 18px;
             font-weight: bold;
             letter-spacing: 4px;
             margin-bottom: 6px;
         }
 
         footer p {
-            color: #888;
+            color: #777;
             font-size: 13px;
         }
 
@@ -303,9 +321,8 @@
                 width: 120px;
             }
 
-            .brand-name {
-                font-size: 28px;
-                letter-spacing: 5px;
+            nav {
+                padding: 14px 5px;
             }
 
             nav a {
@@ -314,13 +331,18 @@
             }
 
             .hero {
-                min-height: 450px;
+                min-height: 500px;
                 padding: 60px 15px;
             }
 
+            .hero-small {
+                font-size: 10px;
+                letter-spacing: 4px;
+            }
+
             .hero h1 {
-                font-size: 42px;
-                letter-spacing: 6px;
+                font-size: 38px;
+                letter-spacing: 1px;
             }
 
             .hero p {
@@ -328,7 +350,7 @@
             }
 
             .hero-tagline {
-                font-size: 12px !important;
+                font-size: 11px !important;
                 letter-spacing: 2px;
             }
 
@@ -341,17 +363,17 @@
                 gap: 25px;
             }
 
-            .perfume {
-                padding: 20px;
-            }
-
             .perfume img {
                 width: 220px;
                 height: 220px;
             }
 
             .container {
-                padding: 55px 15px;
+                padding: 60px 15px;
+            }
+
+            .contact {
+                margin: 0 15px 60px;
             }
         }
 
@@ -364,7 +386,10 @@
 
     <header class="brand-header">
 
-        <img class="logo" src="LOGO.jpeg" alt="H.Scent Logo">
+        <img
+            class="logo"
+            src="LOGO.jpeg"
+            alt="H.Scent Logo">
 
         <div class="brand-subtitle">
             Luxury Fragrances
@@ -388,10 +413,15 @@
     <section class="hero" id="home">
 
         <div class="hero-content">
-<h1>Discover Your Signature Scent</h1>
+
             <div class="hero-small">
                 H.Scent Collection
             </div>
+
+            <h1>
+                Discover Your<br>
+                Signature Scent
+            </h1>
 
             <p>
                 Luxury Fragrances Crafted to Leave an Impression.
@@ -414,6 +444,7 @@
 
     <main class="container">
 
+
         <!-- ABOUT -->
 
         <section id="about">
@@ -423,15 +454,15 @@
             </div>
 
             <h2 class="section-title">
-                Welcome to H.Scent
+                The Art of Fragrance
             </h2>
 
             <div class="gold-line"></div>
 
             <p class="about-text">
-                Discover premium fragrances crafted for those who appreciate
-                luxury, elegance and confidence. Every H.Scent fragrance is
-                designed to leave a memorable impression.
+                Discover premium fragrances created for those who appreciate
+                luxury, elegance and confidence. Every fragrance is carefully
+                selected to leave a lasting and memorable impression.
             </p>
 
         </section>
@@ -459,7 +490,9 @@
 
                 <div class="perfume">
 
-                    <img src="bloom .jpg.jpeg" alt="Bloom Whisper">
+                    <img
+                        src="bloom .jpg.jpeg"
+                        alt="Bloom Whisper">
 
                     <h3>
                         Bloom Whisper
@@ -487,7 +520,9 @@
 
                 <div class="perfume">
 
-                    <img src="MOON BLOSSOM.jpeg" alt="Moon Blossom">
+                    <img
+                        src="MOON BLOSSOM.jpeg"
+                        alt="Moon Blossom">
 
                     <h3>
                         Moon Blossom
@@ -515,7 +550,9 @@
 
                 <div class="perfume">
 
-                    <img src="BLACK.jpeg" alt="Black Legacy">
+                    <img
+                        src="BLACK.jpeg"
+                        alt="Black Legacy">
 
                     <h3>
                         Black Legacy
@@ -543,7 +580,9 @@
 
                 <div class="perfume">
 
-                    <img src="DARK.jpeg" alt="Dark Desire">
+                    <img
+                        src="DARK.jpeg"
+                        alt="Dark Desire">
 
                     <h3>
                         Dark Desire
@@ -578,11 +617,11 @@
     <section class="contact" id="contact">
 
         <h2>
-            Contact H.Scent
+            Find Your Signature Fragrance
         </h2>
 
         <p>
-            Ready to find your signature fragrance?
+            Ready to discover your next favourite scent?
             Order directly through WhatsApp.
         </p>
 
