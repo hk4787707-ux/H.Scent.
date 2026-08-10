@@ -173,6 +173,39 @@
         }
 
         .about-text {
+
+            .about-features {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    max-width: 900px;
+    margin: 45px auto 0;
+    text-align: center;
+}
+
+.about-features > div {
+    min-width: 180px;
+}
+
+.about-features strong {
+    display: block;
+    color: #d4af37;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.about-features span {
+    color: #ffffff;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+    .about-features {
+        flex-direction: column;
+        gap: 25px;
+    }
+}
             max-width: 720px;
             margin: 0 auto 85px;
             color: #c8c8c8;
@@ -584,8 +617,7 @@
         </section>
         
          <!-- ABOUT -->
-
-    <!-- ABOUT -->
+        
 <section id="about" class="about-section">
 
     <div class="about-content">
