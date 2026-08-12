@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>China Home Mart | Home & Kitchen Products</title>
+
+<meta name="description" content="China Home Mart - Kitchen, Home Decor, Home Gadgets and useful products.">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f7f7f7;
+    color:#222;
+}
+
+/* TOP BAR */
+.top-bar{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:9px;
+    font-size:13px;
+}
+
+/* HEADER */
+header{
+    background:white;
+    padding:18px 5%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    border-bottom:1px solid #ddd;
+}
+
+.logo-text{
+    font-size:25px;
+    font-weight:bold;
+    color:#d71920;
+    white-space:nowrap;
+}
+
+.search-box{
+    flex:1;
+    max-width:550px;
+    display:flex;
+}
+
+.search-box input{
+    width:100%;
+    padding:13px 18px;
+    border:1px solid #ccc;
+    border-radius:6px 0 0 6px;
+    font-size:15px;
+    outline:none;
+}
+
+.search-box button{
+    border:none;
+    background:#d71920;
+    color:white;
+    padding:0 22px;
+    border-radius:0 6px 6px 0;
+    cursor:pointer;
+    font-size:18px;
+}
+
+.header-icons{
+    display:flex;
+    gap:20px;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.header-icons span{
+    cursor:pointer;
+}
+
+/* NAV */
+nav{
+    background:#d71920;
+    padding:14px 5%;
+    display:flex;
+    justify-content:center;
+    gap:35px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:14px;
+}
+
+/* HERO */
+.hero{
+    min-height:390px;
+    background:linear-gradient(120deg,#111,#444);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    padding:50px 20px;
+}
+
+.hero-content{
+    max-width:750px;
+}
+
+.hero h1{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.hero h1 span{
+    color:#ffcc00;
+}
+
+.hero p{
+    font-size:18px;
+    margin-bottom:25px;
+}
+
+.hero-btn{
+    display:inline-block;
+    background:#d71920;
+    color:white;
+    padding:14px 30px;
+    border-radius:5px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* SECTION */
+.section{
+    max-width:1200px;
+    margin:auto;
+    padding:55px 20px;
+}
+
+.section-title{
+    text-align:center;
+    font-size:30px;
+    margin-bottom:35px;
+}
+
+.section-title span{
+    color:#d71920;
+}
+
+/* CATEGORIES */
+.categories{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.category{
+    background:white;
+    border:1px solid #ddd;
+    border-radius:10px;
+    padding:30px 15px;
+    text-align:center;
+    transition:.3s;
+    cursor:pointer;
+}
+
+.category:hover{
+    transform:translateY(-5px);
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+}
+
+.category-icon{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.category h3{
+    font-size:17px;
+}
+
+/* PRODUCTS */
+.products{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.product{
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    border:1px solid #ddd;
+    transition:.3s;
+}
+
+.product:hover{
+    transform:translateY(-5px);
+    box-shadow:0 8px 25px rgba(0,0,0,.12);
+}
+
+.product-image{
+    height:230px;
+    background:#eee;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:55px;
+}
+
+.product-info{
+    padding:18px;
+}
+
+.product-info h3{
+    font-size:17px;
+    margin-bottom:10px;
+}
+
+.price{
+    color:#d71920;
+    font-size:20px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.old-price{
+    color:#999;
+    text-decoration:line-through;
+    font-size:14px;
+    margin-left:7px;
+}
+
+.add-btn{
+    width:100%;
+    padding:11px;
+    border:none;
+    background:#111;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.add-btn:hover{
+    background:#d71920;
+}
+
+/* FEATURES */
+.features{
+    background:white;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    padding:35px 5%;
+    border-top:1px solid #ddd;
+    border-bottom:1px solid #ddd;
+}
+
+.feature{
+    text-align:center;
+}
+
+.feature-icon{
+    font-size:30px;
+    margin-bottom:8px;
+}
+
+.feature strong{
+    display:block;
+    margin-bottom:5px;
+}
+
+/* NEWSLETTER */
+.newsletter{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:55px 20px;
+}
+
+.newsletter h2{
+    margin-bottom:10px;
+}
+
+.newsletter p{
+    color:#ccc;
+    margin-bottom:20px;
+}
+
+.newsletter input{
+    width:300px;
+    max-width:80%;
+    padding:13px;
+    border:none;
+    border-radius:5px;
+}
+
+.newsletter button{
+    padding:13px 22px;
+    border:none;
+    background:#d71920;
+    color:white;
+    border-radius:5px;
+    font-weight:bold;
+}
+
+/* FOOTER */
+footer{
+    background:#050505;
+    color:#aaa;
+    text-align:center;
+    padding:35px 20px;
+}
+
+footer h2{
+    color:white;
+    margin-bottom:10px;
+}
+
+footer p{
+    font-size:13px;
+}
+
+/* MOBILE */
+@media(max-width:800px){
+
+    header{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .logo-text{
+        width:100%;
+        text-align:center;
+    }
+
+    .search-box{
+        width:100%;
+    }
+
+    .header-icons{
+        width:100%;
+        justify-content:center;
+    }
+
+    nav{
+        gap:15px;
+        overflow-x:auto;
+        justify-content:flex-start;
+    }
+
+    nav a{
+        white-space:nowrap;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .categories{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .products{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .features{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:500px){
+
+    .categories{
+        grid-template-columns:repeat(2,1fr);
+        gap:10px;
+    }
+
+    .category{
+        padding:20px 8px;
+    }
+
+    .category-icon{
+        font-size:32px;
+    }
+
+    .products{
+        grid-template-columns:1fr 1fr;
+        gap:10px;
+    }
+
+    .product-image{
+        height:160px;
+    }
+
+    .product-info{
+        padding:12px;
+    }
+
+    .product-info h3{
+        font-size:14px;
+    }
+
+    .price{
+        font-size:17px;
+    }
+
+    .features{
+        grid-template-columns:1fr 1fr;
+        padding:25px 15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="top-bar">
+🇨🇳 Imported Products from China | Quality Products for Your Home
+</div>
+
+<header>
+
+<div class="logo-text">
+China Home Mart
+</div>
+
+<div class="search-box">
+<input type="text" placeholder="Search products...">
+<button>🔍</button>
+</div>
+
+<div class="header-icons">
+<span>👤 Account</span>
+<span>🛒 Cart (0)</span>
+</div>
+
+</header>
+
+<nav>
+<a href="#">Home</a>
+<a href="#categories">Categories</a>
+<a href="#new">New Arrivals</a>
+<a href="#best">Best Sellers</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>
+Smart Products for <span>Every Home</span>
+</h1>
+
+<p>
+Kitchen accessories, home decor, gadgets and useful products.
+</p>
+
+<a href="#categories" class="hero-btn">
+Shop Now
+</a>
+
+</div>
+
+</section>
+
+<section class="section" id="categories">
+
+<h2 class="section-title">
+Shop By <span>Categories</span>
+</h2>
+
+<div class="categories">
+
+<div class="category">
+<div class="category-icon">🍳</div>
+<h3>Kitchen Accessories</h3>
+</div>
+
+<div class="category">
+<div class="category-icon">🏠</div>
+<h3>Home Decor</h3>
+</div>
+
+<div class="category">
+<div class="category-icon">⚡</div>
+<h3>Home Gadgets</h3>
+</div>
+
+<div class="category">
+<div class="category-icon">🧴</div>
+<h3>Organizers</h3>
+</div>
+
+<div class="category">
+<div class="category-icon">🧂</div>
+<h3>Kitchen Storage</h3>
+</div>
+
+<div class="category">
+<div class="category-icon">🧹</div>
+<h3>Cleaning Products</h3>
+</div>
+
+<div class="category">
+<div class="category-icon">🔪</div>
+<h3>Choppers & Cutters</h3>
+</div>
+
+<div class="category">
+<div class="category-icon">🗄️</div>
+<h3>Shelves & Stands</h3>
+</div>
+
+</div>
+
+</section>
+
+<div class="features">
+
+<div class="feature">
+<div class="feature-icon">🚚</div>
+<strong>Fast Delivery</strong>
+<span>Delivery across Pakistan</span>
+</div>
+
+<div class="feature">
+<div class="feature-icon">💳</div>
+<strong>Easy Payment</strong>
+<span>Simple payment options</span>
+</div>
+
+<div class="feature">
+<div class="feature-icon">📦</div>
+<strong>Quality Products</strong>
+<span>Selected products</span>
+</div>
+
+<div class="feature">
+<div class="feature-icon">💬</div>
+<strong>WhatsApp Support</strong>
+<span>Order & support</span>
+</div>
+
+</div>
+
+<section class="section" id="new">
+
+<h2 class="section-title">
+New <span>Arrivals</span>
+</h2>
+
+<div class="products">
+
+<div class="product">
+<div class="product-image">🍳</div>
+<div class="product-info">
+<h3>Kitchen Gadget</h3>
+<div class="price">Rs. 999</div>
+<button class="add-btn">Add to Cart</button>
+</div>
+</div>
+
+<div class="product">
+<div class="product-image">🧂</div>
+<div class="product-info">
+<h3>Kitchen Storage Box</h3>
+<div class="price">Rs. 1,299</div>
+<button class="add-btn">Add to Cart</button>
+</div>
+</div>
+
+<div class="product">
+<div class="product-image">🏠</div>
+<div class="product-info">
+<h3>Home Decor Item</h3>
+<div class="price">Rs. 1,499</div>
+<button class="add-btn">Add to Cart</button>
+</div>
+</div>
+
+<div class="product">
+<div class="product-image">✨</div>
+<div class="product-info">
+<h3>Home Gadget</h3>
+<div class="price">Rs. 1,799</div>
+<button class="add-btn">Add to Cart</button>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="best">
+
+<h2 class="section-title">
+Best <span>Sellers</span>
+</h2>
+
+<div class="products">
+
+<div class="product">
+<div class="product-image">🔪</div>
+<div class="product-info">
+<h3>Manual Chopper</h3>
+<div class="price">
+Rs. 1,250
+<span class="old-price">Rs. 1,500</span>
+</div>
+<button class="add-btn">Add to Cart</button>
+</div>
+</div>
+
+<div class="product">
+<div class="product-image">🧺</div>
+<div class="product-info">
+<h3>Storage Organizer</h3>
+<div class="price">
+Rs. 850
+<span class="old-price">Rs. 1,100</span>
+</div>
+<button class="add-btn">Add to Cart</button>
+</div>
+</div>
+
+<div class="product">
+<div class="product-image">🛁</div>
+<div class="product-info">
+<h3>Bathroom Organizer</h3>
+<div class="price">
+Rs. 999
+<span class="old-price">Rs. 1,300</span>
+</div>
+<button class="add-btn">Add to Cart</button>
+</div>
+</div>
+
+<div class="product">
+<div class="product-image">💡</div>
+<div class="product-info">
+<h3>Smart Home Gadget</h3>
+<div class="price">
+Rs. 1,599
+<span class="old-price">Rs. 1,900</span>
+</div>
+<button class="add-btn">Add to Cart</button>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section class="newsletter">
+
+<h2>Stay Updated</h2>
+
+<p>Get updates about new products and special offers.</p>
+
+<input type="email" placeholder="Enter your email">
+<button>Subscribe</button>
+
+</section>
+
+<footer id="contact">
+
+<h2>China Home Mart</h2>
+
+<p>Imported Products for Every Home</p>
+
+<p>WhatsApp: 0335-7654140</p>
+
+<p>© 2026 China Home Mart. All Rights Reserved.</p>
+
+</footer>
+
+</body>
+</html>
