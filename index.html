@@ -114,9 +114,9 @@ header{
 
 .hero h1{
     font-family:Georgia,serif;
-    font-size:64px;
-    line-height:1.1;
-    margin-bottom:25px;
+    font-weight:normal;
+    font-size:68px;
+    letter-spacing:-1px;
 }
 
 .hero h1 span{
@@ -193,33 +193,31 @@ header{
 /* ================= SEARCH ================= */
 
 .search-box{
-    max-width:600px;
-    margin:0 auto 45px;
+    max-width:500px;
+    margin:0 auto 35px;
 }
 
 .search-box input{
-    width:100%;
-    padding:16px 22px;
-    border-radius:30px;
-    border:1px solid #4d401d;
-    background:#111;
+    background:#0d0d0d;
+    border:1px solid #333;
     color:#fff;
-    outline:none;
-    font-size:15px;
+    padding:16px 22px;
+    border-radius:3px;
 }
 
 .search-box input:focus{
     border-color:#d4af37;
+    box-shadow:0 0 15px rgba(212,175,55,.12);
 }
-
 /* ================= PERFUME ROW ================= */
 
 .perfume-row{
     display:flex;
-    gap:22px;
+    gap:28px;
     overflow-x:auto;
-    padding:10px 5px 30px;
+    padding:15px 8px 35px;
     scroll-behavior:smooth;
+    scroll-snap-type:x mandatory;
     scrollbar-width:thin;
     scrollbar-color:#d4af37 #111;
 }
@@ -238,47 +236,51 @@ header{
 }
 
 .perfume{
-    flex:0 0 270px;
-    background:linear-gradient(145deg,#1b1b1b,#090909);
-    border:1px solid #403416;
-    border-radius:20px;
-    padding:18px;
-    text-align:center;
-    transition:.4s;
+    flex:0 0 285px;
+    scroll-snap-align:start;
+    background:linear-gradient(145deg,#191919,#080808);
+    border:1px solid #3f3518;
+    border-radius:4px;
+    padding:14px;
+    text-align:left;
+    transition:all .4s ease;
 }
 
 .perfume:hover{
-    transform:translateY(-8px);
+    transform:translateY(-10px);
     border-color:#d4af37;
-    box-shadow:0 20px 45px rgba(212,175,55,.12);
+    box-shadow:0 20px 45px rgba(212,175,55,.15);
 }
 
 .perfume img{
     width:100%;
-    height:270px;
+    height:310px;
     object-fit:cover;
-    border-radius:15px;
-    margin-bottom:20px;
+    display:block;
+    margin-bottom:18px;
+    border-radius:2px;
 }
 
 .perfume h3{
-    color:#d4af37;
+    color:#fff;
     font-family:Georgia,serif;
-    font-size:23px;
+    font-size:22px;
     margin-bottom:8px;
 }
 
+.perfume-description,
 .description{
-    color:#aaa;
+    color:#999;
     font-size:13px;
     min-height:42px;
-    margin-bottom:12px;
+    margin-bottom:10px;
 }
 
 .price{
-    font-size:20px;
+    color:#fff;
+    font-size:19px;
     font-weight:bold;
-    margin-bottom:16px;
+    margin:15px 0;
 }
 
 .price span{
@@ -293,17 +295,18 @@ header{
 .cart-btn,
 .order-btn{
     flex:1;
-    border:0;
+    text-align:center;
     padding:11px 8px;
-    border-radius:25px;
+    border-radius:3px;
+    font-size:11px;
     font-weight:bold;
     cursor:pointer;
     text-decoration:none;
-    font-size:12px;
+    transition:.3s;
 }
 
 .cart-btn{
-    background:#222;
+    background:#111;
     color:#d4af37;
     border:1px solid #d4af37;
 }
@@ -311,6 +314,33 @@ header{
 .order-btn{
     background:#d4af37;
     color:#080808;
+    border:1px solid #d4af37;
+}
+
+.cart-btn:hover,
+.order-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px rgba(212,175,55,.2);
+}
+
+/* ================= MOBILE PERFUME ROW ================= */
+
+@media(max-width:700px){
+
+    .perfume-row{
+        gap:18px;
+        padding-left:5px;
+        padding-right:5px;
+    }
+
+    .perfume{
+        flex:0 0 82%;
+    }
+
+    .perfume img{
+        height:330px;
+    }
+
 }
 
 /* ================= ABOUT ================= */
