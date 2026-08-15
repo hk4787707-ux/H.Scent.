@@ -955,50 +955,147 @@ footer p{
 
 <script>
 
-/* ================= CART ================= */
+/* ================= PROFESSIONAL CART ================= */
 
 let cart = [];
 
 
-function addToCart(name,price,image){
+/* ADD PRODUCT */
 
-    cart.push({
-        name:name,
-        price:price,
-        image:image
-    });
+function addToCart(name, price, image){
+
+    const existing = cart.find(item => item.name === name);
+
+    if(existing){
+
+        existing.quantity++;
+
+    }else{
+
+        cart.push({
+            name: name,
+            price: price,
+            image: image,
+            quantity: 1
+        });
+
+    }
 
     updateCart();
-
     openCart();
 }
 
 
+/* UPDATE CART */
+
 function updateCart(){
 
-    document.getElementById("cartCount").innerText = cart.length;
+    const cartCount = document.getElementById("cartCount");
+    const cartItems = document.getElementById("cartItems");
+    const cartTotal = document.getElementById("cartTotal");
 
-    let items = document.getElementById("cartItems");
+    let totalItems = 0;
+    let totalPrice = 0;
 
-    items.innerHTML = "";
+    cartItems.innerHTML = "";
 
-    let total = 0;
+    if(cart.length === 0){
 
-    cart.forEach((item,index)=>{
+        cartItems.innerHTML = `
+            <div style="
+                text-align:center;
+                padding:50px 10px;
+                color:#888;
+            ">
+                <div style="font-size:45px;">🛒</div>
 
-        total += item.price;
+                <h3 style="
+                    color:#d4af37;
+                    margin:15px 0 8px;
+                ">
+                    Your Cart is Empty
+                </h3>
 
-        items.innerHTML += `
+                <p>
+                    Add your favourite H.Scent fragrance.
+                </p>
+            </div>
+        `;
+
+    }
+
+
+    cart.forEach((item, index) => {
+
+        totalItems += item.quantity;
+
+        totalPrice += item.price * item.quantity;
+
+
+        cartItems.innerHTML += `
 
             <div class="cart-item">
 
-                <img src="${item.image}" alt="${item.name}">
+                <img
+                    src="${item.image}"
+                    alt="${item.name}"
+                >
 
                 <div class="cart-item-info">
 
                     <h4>${item.name}</h4>
 
-                    <p>Rs. ${item.price.toLocaleString()}</p>
+                    <p>
+                        Rs. ${item.price.toLocaleString()}
+                    </p>
+
+
+                    <div style="
+                        display:flex;
+                        align-items:center;
+                        gap:8px;
+                        margin-top:8px;
+                    ">
+
+                        <button
+                            onclick="decreaseQuantity(${index})"
+                            style="
+                                width:28px;
+                                height:28px;
+                                border:1px solid #d4af37;
+                                background:#111;
+                                color:#d4af37;
+                                border-radius:50%;
+                                cursor:pointer;
+                            ">
+                            −
+                        </button>
+
+
+                        <span style="
+                            min-width:20px;
+                            text-align:center;
+                        ">
+                            ${item.quantity}
+                        </span>
+
+
+                        <button
+                            onclick="increaseQuantity(${index})"
+                            style="
+                                width:28px;
+                                height:28px;
+                                border:1px solid #d4af37;
+                                background:#111;
+                                color:#d4af37;
+                                border-radius:50%;
+                                cursor:pointer;
+                            ">
+                            +
+                        </button>
+
+                    </div>
+
 
                     <button
                         class="remove"
@@ -1011,38 +1108,77 @@ function updateCart(){
             </div>
 
         `;
+
     });
 
-    document.getElementById("cartTotal").innerText =
-        total.toLocaleString();
+
+    cartCount.innerText = totalItems;
+
+    cartTotal.innerText =
+        totalPrice.toLocaleString();
+
 }
 
 
-function removeItem(index){
+/* INCREASE */
 
-    cart.splice(index,1);
+function increaseQuantity(index){
+
+    cart[index].quantity++;
 
     updateCart();
 }
 
 
+/* DECREASE */
+
+function decreaseQuantity(index){
+
+    if(cart[index].quantity > 1){
+
+        cart[index].quantity--;
+
+    }else{
+
+        cart.splice(index, 1);
+
+    }
+
+    updateCart();
+}
+
+
+/* REMOVE */
+
+function removeItem(index){
+
+    cart.splice(index, 1);
+
+    updateCart();
+}
+
+
+/* OPEN CART */
+
 function openCart(){
 
     document
-    .getElementById("cartPanel")
-    .classList.add("active");
+        .getElementById("cartPanel")
+        .classList.add("active");
 }
 
+
+/* CLOSE CART */
 
 function closeCart(){
 
     document
-    .getElementById("cartPanel")
-    .classList.remove("active");
+        .getElementById("cartPanel")
+        .classList.remove("active");
 }
 
 
-/* ================= WHATSAPP CART ================= */
+/* ================= WHATSAPP CHECKOUT ================= */
 
 function checkoutWhatsApp(){
 
@@ -1053,32 +1189,48 @@ function checkoutWhatsApp(){
         return;
     }
 
+
     let message =
-        "Hello H.Scent,%0A%0AI want to order:%0A";
+        "Hello H.Scent,%0A%0A" +
+        "I want to order:%0A%0A";
+
 
     let total = 0;
 
-    cart.forEach(item=>{
+
+    cart.forEach(item => {
+
+        const itemTotal =
+            item.price * item.quantity;
+
+        total += itemTotal;
+
 
         message +=
-        "- " +
-        item.name +
-        " — Rs. " +
-        item.price +
-        "%0A";
+            "• " +
+            item.name +
+            " x" +
+            item.quantity +
+            " — Rs. " +
+            itemTotal.toLocaleString() +
+            "%0A";
 
-        total += item.price;
     });
 
+
     message +=
-        "%0ATotal: Rs. " +
-        total +
-        "%0A%0AThank you.";
+        "%0A--------------------%0A" +
+        "Total: Rs. " +
+        total.toLocaleString() +
+        "%0A%0A" +
+        "Thank you — H.Scent";
+
 
     window.open(
         "https://wa.me/923357654140?text=" + message,
         "_blank"
     );
+
 }
 
 
