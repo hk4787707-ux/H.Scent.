@@ -618,41 +618,167 @@ footer p{
 
 </header>
 
+/* ================= PREMIUM HOME ================= */
 
-<!-- HERO -->
+.hero{
+    min-height:680px;
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
 
-<section class="hero" id="home">
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            #292929 0%,
+            #151515 35%,
+            #080808 70%,
+            #030303 100%
+        );
+}
 
-    <div class="hero-content">
+.hero::before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    border:1px solid rgba(212,175,55,.12);
+    border-radius:50%;
+    animation:heroGlow 6s ease-in-out infinite;
+}
 
-        <div class="hero-small">
-            H.SCENT COLLECTION
-        </div>
+.hero::after{
+    content:"";
+    position:absolute;
+    width:700px;
+    height:700px;
+    border:1px solid rgba(212,175,55,.06);
+    border-radius:50%;
+}
 
-        <h1>
-            Discover Your <span>Signature Scent</span>
-        </h1>
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:850px;
+    padding:40px 20px;
+    animation:heroFade 1.2s ease;
+}
 
-        <p>
-            Luxury fragrances crafted to leave a lasting impression.
-            Discover elegance, confidence and unforgettable character.
-        </p>
+.hero-small{
+    color:#d4af37;
+    font-size:11px;
+    letter-spacing:6px;
+    font-weight:bold;
+    margin-bottom:25px;
+}
 
-        <div class="hero-buttons">
+.hero h1{
+    font-family:Georgia,serif;
+    font-size:70px;
+    line-height:1.05;
+    font-weight:normal;
+    margin-bottom:28px;
+    letter-spacing:-1px;
+}
 
-            <a href="#perfumes" class="btn btn-gold">
-                SHOP COLLECTION
-            </a>
+.hero h1 span{
+    color:#d4af37;
+}
 
-            <a href="#about" class="btn btn-outline">
-                DISCOVER H.SCENT
-            </a>
+.hero p{
+    max-width:620px;
+    margin:auto;
+    color:#bdbdbd;
+    font-size:16px;
+    line-height:1.8;
+}
 
-        </div>
+.hero-buttons{
+    margin-top:35px;
+}
 
-    </div>
+.hero-features{
+    display:flex;
+    justify-content:center;
+    gap:70px;
+    margin-top:55px;
+}
 
-</section>
+.hero-features strong{
+    display:block;
+    color:#d4af37;
+    font-family:Georgia,serif;
+    font-size:25px;
+}
+
+.hero-features span{
+    display:block;
+    color:#999;
+    font-size:11px;
+    margin-top:5px;
+    letter-spacing:1px;
+}
+
+@keyframes heroFade{
+
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+@keyframes heroGlow{
+
+    0%,100%{
+        transform:scale(1);
+        opacity:.5;
+    }
+
+    50%{
+        transform:scale(1.08);
+        opacity:1;
+    }
+
+}
+
+@media(max-width:700px){
+
+    .hero{
+        min-height:620px;
+    }
+
+    .hero h1{
+        font-size:45px;
+    }
+
+    .hero-small{
+        font-size:9px;
+        letter-spacing:4px;
+    }
+
+    .hero p{
+        font-size:14px;
+    }
+
+    .hero-features{
+        gap:25px;
+        margin-top:45px;
+    }
+
+    .hero-features span{
+        font-size:9px;
+    }
+
+}
+
 
 
 <!-- PRODUCTS -->
