@@ -400,12 +400,21 @@
 
             .section-title {
                 font-size: 30px;
-            }
+}
 .perfume-grid {
-      display: grid;
-      grid-template-columns: repeat(2,
-minmax(0, 1fr));
-      gap: 25px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(2, auto);
+    grid-auto-columns: calc(50% - 12.5px);
+    gap: 25px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 10px;
+    scroll-behavior: smooth;
+}
+
+.perfume-grid::-webkit-scrollbar {
+    height: 6px;
 }
             .perfume img {
                 width: 220px;
