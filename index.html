@@ -402,9 +402,14 @@
                 font-size: 30px;
             }
 
-            .perfume-grid {
-                grid-template-columns: 1fr;
-                gap: 25px;
+           .perfume-grid {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 25px;
+  overflow-x: auto;
+}    
+   grid-template-columns: 1fr;
+  gap: 25px;
             }
 
             .perfume img {
