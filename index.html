@@ -612,6 +612,56 @@ footer p{
         font-size:30px;
     }
 }
+  /* ================= REVIEWS ================= */
+
+.review-row{
+    display:flex;
+    gap:25px;
+    overflow-x:auto;
+    padding:10px 5px 30px;
+    scroll-behavior:smooth;
+}
+
+.review-card{
+    flex:0 0 300px;
+    background:linear-gradient(145deg,#191919,#080808);
+    border:1px solid #3f3518;
+    padding:30px 25px;
+    border-radius:5px;
+    text-align:center;
+    transition:.4s;
+}
+
+.review-card:hover{
+    transform:translateY(-7px);
+    border-color:#d4af37;
+    box-shadow:0 15px 35px rgba(212,175,55,.15);
+}
+
+.stars{
+    color:#d4af37;
+    font-size:20px;
+    letter-spacing:3px;
+    margin-bottom:15px;
+}
+
+.review-card h3{
+    color:#fff;
+    font-family:Georgia,serif;
+    margin-bottom:12px;
+}
+
+.review-card p{
+    color:#999;
+    font-size:14px;
+    line-height:1.7;
+    margin-bottom:18px;
+}
+
+.review-card strong{
+    color:#d4af37;
+    font-size:12px;
+}
 </style>
 </head>
 
@@ -949,7 +999,56 @@ footer p{
     </a>
 
 </section>
+  
+<!-- ================= CUSTOMER REVIEWS ================= -->
 
+<section class="reviews section" id="reviews">
+
+    <div class="section-label">
+        CUSTOMER LOVE
+    </div>
+
+    <h2 class="section-title">
+        What Our Customers Say
+    </h2>
+
+    <div class="gold-line"></div>
+
+    <div class="review-row">
+
+        <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <h3>Excellent Fragrance</h3>
+            <p>
+                Amazing fragrance and beautiful packaging.
+                The scent is long lasting and premium.
+            </p>
+            <strong>— H.Scent Customer</strong>
+        </div>
+
+        <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <h3>Very Premium</h3>
+            <p>
+                Loved the quality and presentation.
+                Definitely feels like a luxury perfume.
+            </p>
+            <strong>— H.Scent Customer</strong>
+        </div>
+
+        <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <h3>Highly Recommended</h3>
+            <p>
+                Beautiful fragrance and excellent service.
+                I will definitely order again.
+            </p>
+            <strong>— H.Scent Customer</strong>
+        </div>
+
+    </div>
+
+</section>
 
 <!-- CART -->
 
