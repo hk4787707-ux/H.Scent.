@@ -1,708 +1,363 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta name="google-site-verification"
-content="zmTauiztvJ8QU4SMCXm2Wq6OB2NHk8J3stBcYuJiG1c">
-
-<title>H.Scent | Luxury Perfumes</title>
-  <link rel="icon" type="image/jpeg" href="LOGO.jpeg">
-<link rel="apple-touch-icon" href="LOGO.jpeg">
-<meta property="og:image" content="LOGO.jpeg">
-<meta property="og:title" content="H.Scent | Luxury Perfumes">  
-
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    background:#080808;
-    color:#fff;
-    font-family:Arial,Helvetica,sans-serif;
-}
-
-/* ================= HEADER ================= */
-
-.top-bar{
-    background:#d4af37;
-    color:#080808;
-    text-align:center;
-    padding:7px;
-    font-size:12px;
-    font-weight:bold;
-    letter-spacing:1px;
-}
-
-header{
-    background:#050505;
-    padding:20px 6%;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    border-bottom:1px solid #302713;
-    position:sticky;
-    top:0;
-    z-index:1000;
-}
-
-.logo{
-    width:100px;
-    height:auto;
-}
-
-.nav{
-    display:flex;
-    gap:30px;
-}
-
-.nav a{
-    color:#fff;
-    text-decoration:none;
-    font-size:13px;
-    font-weight:bold;
-    letter-spacing:1px;
-    transition:.3s;
-}
-
-.nav a:hover{
-    color:#d4af37;
-}
-
-.header-cart{
-    background:#d4af37;
-    color:#080808;
-    border:0;
-    padding:10px 16px;
-    border-radius:25px;
-    font-weight:bold;
-    cursor:pointer;
-}
-
-/* ================= HERO ================= */
-
-.hero{
-    min-height:650px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:80px 20px;
-    background:
-    radial-gradient(circle at center,#292929 0%,#111 42%,#050505 100%);
-}
-
-.hero-content{
-    max-width:850px;
-}
-
-.hero-small{
-    color:#d4af37;
-    font-size:12px;
-    letter-spacing:6px;
-    font-weight:bold;
-    margin-bottom:22px;
-}
-
-.hero h1{
-    font-family:Georgia,serif;
-    font-weight:normal;
-    font-size:68px;
-    letter-spacing:-1px;
-}
-
-.hero h1 span{
-    color:#d4af37;
-}
-
-.hero p{
-    color:#ccc;
-    font-size:17px;
-    max-width:650px;
-    margin:auto;
-}
-
-.hero-buttons{
-    margin-top:35px;
-}
-
-.btn{
-    display:inline-block;
-    padding:14px 32px;
-    border-radius:30px;
-    text-decoration:none;
-    font-weight:bold;
-    margin:5px;
-    transition:.3s;
-}
-
-.btn-gold{
-    background:#d4af37;
-    color:#080808;
-}
-
-.btn-outline{
-    border:1px solid #d4af37;
-    color:#d4af37;
-}
-
-.btn:hover{
-    transform:translateY(-4px);
-    box-shadow:0 12px 30px rgba(212,175,55,.2);
-}
-
-/* ================= SECTION ================= */
-
-.section{
-    max-width:1200px;
-    margin:auto;
-    padding:90px 20px;
-}
-
-.section-label{
-    text-align:center;
-    color:#d4af37;
-    font-size:11px;
-    letter-spacing:5px;
-    font-weight:bold;
-    margin-bottom:12px;
-}
-
-.section-title{
-    text-align:center;
-    font-family:Georgia,serif;
-    font-size:42px;
-    margin-bottom:15px;
-}
-
-.gold-line{
-    width:65px;
-    height:2px;
-    background:#d4af37;
-    margin:0 auto 40px;
-}
-
-/* ================= SEARCH ================= */
-
-.search-box{
-    max-width:500px;
-    margin:0 auto 35px;
-}
-
-.search-box input{
-    background:#0d0d0d;
-    border:1px solid #333;
-    color:#fff;
-    padding:16px 22px;
-    border-radius:3px;
-}
-
-.search-box input:focus{
-    border-color:#d4af37;
-    box-shadow:0 0 15px rgba(212,175,55,.12);
-}
-/* ================= PERFUME ROW ================= */
-
-.perfume-row{
-    display:flex;
-    gap:28px;
-    overflow-x:auto;
-    padding:15px 8px 35px;
-    scroll-behavior:smooth;
-    scroll-snap-type:x mandatory;
-    scrollbar-width:thin;
-    scrollbar-color:#d4af37 #111;
-}
-
-.perfume-row::-webkit-scrollbar{
-    height:6px;
-}
-
-.perfume-row::-webkit-scrollbar-track{
-    background:#111;
-}
-
-.perfume-row::-webkit-scrollbar-thumb{
-    background:#d4af37;
-    border-radius:20px;
-}
-
-.perfume{
-    flex:0 0 285px;
-    scroll-snap-align:start;
-    background:linear-gradient(145deg,#191919,#080808);
-    border:1px solid #3f3518;
-    border-radius:4px;
-    padding:14px;
-    text-align:left;
-    transition:all .4s ease;
-}
-
-.perfume:hover{
-    transform:translateY(-10px);
-    border-color:#d4af37;
-    box-shadow:0 20px 45px rgba(212,175,55,.15);
-}
-
-.perfume img{
-    width:100%;
-    height:310px;
-    object-fit:cover;
-    display:block;
-    margin-bottom:18px;
-    border-radius:2px;
-}
-
-.perfume h3{
-    color:#fff;
-    font-family:Georgia,serif;
-    font-size:22px;
-    margin-bottom:8px;
-}
-
-.perfume-description,
-.description{
-    color:#999;
-    font-size:13px;
-    min-height:42px;
-    margin-bottom:10px;
-}
-
-.price{
-    color:#fff;
-    font-size:19px;
-    font-weight:bold;
-    margin:15px 0;
-}
-
-.price span{
-    color:#d4af37;
-}
-
-.product-buttons{
-    display:flex;
-    gap:8px;
-}
-
-.cart-btn,
-.order-btn{
-    flex:1;
-    text-align:center;
-    padding:11px 8px;
-    border-radius:3px;
-    font-size:11px;
-    font-weight:bold;
-    cursor:pointer;
-    text-decoration:none;
-    transition:.3s;
-}
-
-.cart-btn{
-    background:#111;
-    color:#d4af37;
-    border:1px solid #d4af37;
-}
-
-.order-btn{
-    background:#d4af37;
-    color:#080808;
-    border:1px solid #d4af37;
-}
-
-.cart-btn:hover,
-.order-btn:hover{
-    transform:translateY(-2px);
-    box-shadow:0 8px 20px rgba(212,175,55,.2);
-}
-
-/* ================= MOBILE PERFUME ROW ================= */
-
-@media(max-width:700px){
-
-    .perfume-row{
-        gap:18px;
-        padding-left:5px;
-        padding-right:5px;
-    }
-
-    .perfume{
-        flex:0 0 82%;
-    }
-
-    .perfume img{
-        height:330px;
-    }
-
-}
-
-/* ================= ABOUT ================= */
-
-.about{
-    background:#0d0d0d;
-    border-top:1px solid #29220f;
-    border-bottom:1px solid #29220f;
-}
-
-.about-content{
-    max-width:850px;
-    margin:auto;
-    text-align:center;
-}
-
-.about-content h2{
-    font-family:Georgia,serif;
-    font-size:42px;
-    margin-bottom:25px;
-}
-
-.about-content h2 span{
-    color:#d4af37;
-}
-
-.about-content p{
-    color:#aaa;
-    line-height:1.9;
-    margin-bottom:18px;
-}
-
-.features{
-    display:flex;
-    justify-content:center;
-    gap:70px;
-    margin-top:45px;
-}
-
-.feature strong{
-    display:block;
-    color:#d4af37;
-    font-size:30px;
-}
-
-.feature span{
-    font-size:13px;
-    color:#ddd;
-}
-
-/* ================= CART ================= */
-
-.cart-panel{
-    position:fixed;
-    top:0;
-    right:-420px;
-    width:390px;
-    max-width:90%;
-    height:100vh;
-    background:#101010;
-    border-left:1px solid #d4af37;
-    z-index:2000;
-    padding:25px;
-    transition:.4s;
-    overflow-y:auto;
-}
-
-.cart-panel.active{
-    right:0;
-}
-
-.cart-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    border-bottom:1px solid #332914;
-    padding-bottom:18px;
-    margin-bottom:20px;
-}
-
-.cart-header h2{
-    color:#d4af37;
-}
-
-.close-cart{
-    background:none;
-    border:0;
-    color:#fff;
-    font-size:25px;
-    cursor:pointer;
-}
-
-.cart-item{
-    display:flex;
-    gap:12px;
-    padding:14px 0;
-    border-bottom:1px solid #292929;
-}
-
-.cart-item img{
-    width:65px;
-    height:65px;
-    object-fit:cover;
-    border-radius:8px;
-}
-
-.cart-item-info{
-    flex:1;
-}
-
-.cart-item-info h4{
-    color:#d4af37;
-}
-
-.remove{
-    background:none;
-    border:0;
-    color:#888;
-    cursor:pointer;
-    margin-top:5px;
-}
-
-.cart-total{
-    margin-top:25px;
-    font-size:21px;
-    font-weight:bold;
-}
-
-.checkout{
-    width:100%;
-    margin-top:20px;
-    padding:15px;
-    border:0;
-    border-radius:30px;
-    background:#d4af37;
-    color:#080808;
-    font-weight:bold;
-    cursor:pointer;
-}
-
-/* ================= CONTACT ================= */
-
-.contact{
-    max-width:900px;
-    margin:80px auto;
-    padding:65px 25px;
-    text-align:center;
-    background:linear-gradient(145deg,#1a1a1a,#090909);
-    border:1px solid #493b18;
-    border-radius:25px;
-}
-
-.contact h2{
-    font-family:Georgia,serif;
-    font-size:38px;
-    margin-bottom:15px;
-}
-
-.contact p{
-    color:#aaa;
-    margin-bottom:28px;
-}
-
-/* ================= FOOTER ================= */
-
-footer{
-    background:#050505;
-    text-align:center;
-    padding:40px 20px;
-    border-top:1px solid #302713;
-}
-
-.footer-name{
-    color:#d4af37;
-    font-size:22px;
-    letter-spacing:6px;
-    font-weight:bold;
-}
-
-footer p{
-    color:#666;
-    font-size:12px;
-    margin-top:10px;
-}
- .social-links{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    margin:20px 0;
-}
-
-.social-links a{
-    color:#d4af37;
-    text-decoration:none;
-    border:1px solid #d4af37;
-    padding:9px 20px;
-    border-radius:25px;
-    font-size:13px;
-}
-
-.social-links a:hover{
-    background:#d4af37;
-    color:#080808;
-}
-
-/* ================= MOBILE ================= */
-
-@media(max-width:700px){
-
-    header{
-        padding:15px;
-    }
-
-    .logo{
-        width:75px;
-    }
-
-    .nav{
-        gap:10px;
-    }
-
-    .nav a{
-        font-size:10px;
-    }
-
-    .header-cart{
-        padding:8px 11px;
-        font-size:11px;
-    }
-
-    .hero{
-        min-height:560px;
-    }
-
-    .hero h1{
-        font-size:42px;
-    }
-
-    .hero p{
-        font-size:14px;
-    }
-
-    .section{
-        padding:65px 15px;
-    }
-
-    .section-title{
-        font-size:32px;
-    }
-
-    .perfume{
-        flex:0 0 250px;
-    }
-
-    .perfume img{
-        height:250px;
-    }
-
-    .features{
-        flex-direction:column;
-        gap:25px;
-    }
-
-    .contact{
-        margin:50px 15px;
-    }
-
-    .contact h2{
-        font-size:30px;
-    }
-}
-  /* ================= REVIEWS ================= */
-
-.review-row{
-    display:flex;
-    gap:25px;
-    overflow-x:auto;
-    padding:10px 5px 30px;
-    scroll-behavior:smooth;
-}
-
-.review-card{
-    flex:0 0 300px;
-    background:linear-gradient(145deg,#191919,#080808);
-    border:1px solid #3f3518;
-    padding:30px 25px;
-    border-radius:5px;
-    text-align:center;
-    transition:.4s;
-}
- 
-.review-card:hover{
-    transform:translateY(-7px);
-    border-color:#d4af37;
-    box-shadow:0 15px 35px rgba(212,175,55,.15);
-}
-
-.stars{
-    color:#d4af37;
-    font-size:20px;
-    letter-spacing:3px;
-    margin-bottom:15px;
-}
-
-.review-card h3{
-    color:#fff;
-    font-family:Georgia,serif;
-    margin-bottom:12px;
-}
-
-.review-card p{
-    color:#999;
-    font-size:14px;
-    line-height:1.7;
-    margin-bottom:18px;
-}
-
-.review-card strong{
-    color:#d4af37;
-    font-size:12px;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>H.Scent | Luxury Perfumes</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0b0b0b;
+            color: white;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        header {
+            background: #111;
+            border-bottom: 1px solid #333;
+            padding: 20px 7%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #d4af37;
+            letter-spacing: 4px;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 75vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px 20px;
+
+            background:
+                linear-gradient(
+                    rgba(0,0,0,0.65),
+                    rgba(0,0,0,0.85)
+                );
+        }
+
+        .hero-small {
+            color: #d4af37;
+            font-size: 13px;
+            letter-spacing: 5px;
+            margin-bottom: 25px;
+            font-weight: bold;
+        }
+
+        .hero h1 {
+            font-family: Georgia, serif;
+            font-size: 65px;
+            margin-bottom: 5px;
+        }
+
+        .hero h2 {
+            font-family: Georgia, serif;
+            font-size: 55px;
+            color: #d4af37;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 650px;
+            line-height: 1.7;
+            color: #ddd;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 14px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn-gold {
+            background: #d4af37;
+            color: black;
+        }
+
+        .btn-outline {
+            border: 1px solid #d4af37;
+            color: #d4af37;
+        }
+
+        /* ================= ABOUT ================= */
+
+        .about {
+            padding: 80px 8%;
+            background: #111;
+        }
+
+        .about-title {
+            text-align: center;
+            color: #d4af37;
+            letter-spacing: 4px;
+            margin-bottom: 50px;
+        }
+
+        .about-box {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+
+        /* YOUR PHOTO */
+
+        .profile-photo {
+            flex: 0 0 280px;
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid #d4af37;
+            box-shadow: 0 0 35px rgba(212,175,55,0.25);
+        }
+
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-content {
+            flex: 1;
+        }
+
+        .about-content h2 {
+            font-family: Georgia, serif;
+            font-size: 38px;
+            margin-bottom: 25px;
+        }
+
+        .about-content p {
+            color: #ccc;
+            line-height: 1.9;
+            margin-bottom: 18px;
+            font-size: 16px;
+        }
+
+        .gold-line {
+            width: 70px;
+            height: 3px;
+            background: #d4af37;
+            margin-bottom: 25px;
+        }
+
+        /* ================= PERFUMES ================= */
+
+        .perfumes {
+            padding: 80px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: Georgia, serif;
+            font-size: 40px;
+            margin-bottom: 50px;
+        }
+
+        .section-title span {
+            color: #d4af37;
+        }
+
+        .perfume-grid {
+            max-width: 1000px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .perfume {
+            background: #151515;
+            border: 1px solid #333;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .perfume img {
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .perfume h3 {
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+
+        .perfume-description {
+            color: #aaa;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            color: #d4af37;
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .order-btn {
+            display: inline-block;
+            background: #d4af37;
+            color: #000;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* ================= CONTACT ================= */
+
+        .contact {
+            padding: 70px 20px;
+            text-align: center;
+            background: #111;
+        }
+
+        .contact h2 {
+            color: #d4af37;
+            margin-bottom: 20px;
+        }
+
+        .contact p {
+            color: #ccc;
+            margin: 10px;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid #333;
+            color: #aaa;
+        }
+
+        footer span {
+            color: #d4af37;
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 768px) {
+
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero h2 {
+                font-size: 35px;
+            }
+
+            .about-box {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .gold-line {
+                margin: 0 auto 25px;
+            }
+
+            .profile-photo {
+                width: 220px;
+                height: 220px;
+            }
+
+            .perfume-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<div class="top-bar">
-    FREE DELIVERY AVAILABLE • LUXURY FRAGRANCES BY H.SCENT
-</div>
+    <!-- ================= NAVIGATION ================= -->
 
-<header>
+    <header>
 
-    <img src="LOGO.jpeg" class="logo" alt="H.Scent">
+        <div class="logo">
+            H.SCENT
+        </div>
 
-    <nav class="nav">
-        <a href="#home">HOME</a>
-        <a href="#perfumes">SHOP</a>
-        <a href="#about">ABOUT</a>
-        <a href="#reviews">REVIEWS</a>
-        <a href="#contact">CONTACT</a>
-    </nav>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#perfumes">Perfumes</a>
+            <a href="#contact">Contact</a>
+        </nav>
 
-    <button class="header-cart" onclick="openCart()">
-        🛒 CART <span id="cartCount">0</span>
-    </button>
+    </header>
 
-</header>
-  
-<!-- ================= PREMIUM HOME ================= -->
 
-<section class="hero" id="home">
+    <!-- ================= HOME ================= -->
 
-    <div class="hero-content">
+    <section class="hero" id="home">
 
         <div class="hero-small">
             H.SCENT • LUXURY FRAGRANCES
         </div>
 
-        <h1>
-            A Fragrance<br>
-            <span>Made For You</span>
-        </h1>
+        <h1>A Fragrance</h1>
+
+        <h2>Made For You</h2>
 
         <p>
             Discover sophisticated fragrances designed to express
@@ -721,762 +376,230 @@ footer p{
 
         </div>
 
-        <div class="hero-features">
+    </section>
 
-            <div>
-                <strong>01</strong>
-                <span>Premium Quality</span>
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about" id="about">
+
+        <div class="about-title">
+            ABOUT H.SCENT
+        </div>
+
+        <div class="about-box">
+
+            <!-- APNI PHOTO YAHAN LAGANI HAI -->
+
+            <div class="profile-photo">
+                <img src="YOUR-PHOTO.jpg" alt="H.Scent">
             </div>
 
-            <div>
-                <strong>02</strong>
-                <span>Luxury Collection</span>
-            </div>
 
-            <div>
-                <strong>03</strong>
-                <span>Made To Impress</span>
-            </div>
+            <div class="about-content">
 
-        </div>
+                <h2>Our Story</h2>
 
-    </div>
-
-</section>
-
-
-
-<!-- PRODUCTS -->
-
-<section class="section" id="perfumes">
-
-    <div class="section-label">
-        H.SCENT COLLECTION
-    </div>
-
-    <h2 class="section-title">
-        Signature Perfumes
-    </h2>
-
-    <div class="gold-line"></div>
-
-    <div class="search-box">
-        <input
-            type="text"
-            id="searchInput"
-            placeholder="🔍 Search your favourite perfume..."
-            onkeyup="searchProducts()">
-    </div>
-
-
-    <div class="perfume-row" id="productRow">
-
-
-        <!-- BLOOM WHISPER -->
-
-        <div class="perfume" data-name="Bloom Whisper">
-
-            <img src="bloom .jpg.jpeg" alt="Bloom Whisper">
-
-            <h3>Bloom Whisper</h3>
-
-            <p class="description">
-                Fresh, feminine and unforgettable fragrance.
-            </p>
-
-            <p class="price">
-                <span>Rs.</span> 2,500
-            </p>
-
-            <div class="product-buttons">
-
-                <button
-                    class="cart-btn"
-                    onclick="addToCart('Bloom Whisper',2500,'bloom .jpg.jpeg')">
-                    ADD TO CART
-                </button>
-
-                <a
-                    class="order-btn"
-                    target="_blank"
-                    href="https://wa.me/923357654140?text=Hello%20H.Scent,%20I%20want%20to%20order%20Bloom%20Whisper">
-                    ORDER
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- MOON BLOSSOM -->
-
-        <div class="perfume" data-name="Moon Blossom">
-
-            <img src="MOON BLOSSOM.jpeg" alt="Moon Blossom">
-
-            <h3>Moon Blossom</h3>
-
-            <p class="description">
-                Bold, mysterious and unforgettable fragrance.
-            </p>
-
-            <p class="price">
-                <span>Rs.</span> 2,500
-            </p>
-
-            <div class="product-buttons">
-
-                <button
-                    class="cart-btn"
-                    onclick="addToCart('Moon Blossom',2500,'MOON BLOSSOM.jpeg')">
-                    ADD TO CART
-                </button>
-
-                <a
-                    class="order-btn"
-                    target="_blank"
-                    href="https://wa.me/923357654140?text=Hello%20H.Scent,%20I%20want%20to%20order%20Moon%20Blossom">
-                    ORDER
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- BLACK LEGACY -->
-
-        <div class="perfume" data-name="Black Legacy">
-
-            <img src="BLACK.jpeg" alt="Black Legacy">
-
-            <h3>Black Legacy</h3>
-
-            <p class="description">
-                Woody, spicy, aromatic and masculine fragrance.
-            </p>
-
-            <p class="price">
-                <span>Rs.</span> 1,500
-            </p>
-
-            <div class="product-buttons">
-
-                <button
-                    class="cart-btn"
-                    onclick="addToCart('Black Legacy',1500,'BLACK.jpeg')">
-                    ADD TO CART
-                </button>
-
-                <a
-                    class="order-btn"
-                    target="_blank"
-                    href="https://wa.me/923357654140?text=Hello%20H.Scent,%20I%20want%20to%20order%20Black%20Legacy">
-                    ORDER
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- DARK DESIRE -->
-
-        <div class="perfume" data-name="Dark Desire">
-
-            <img src="DARK.jpeg" alt="Dark Desire">
-
-            <h3>Dark Desire</h3>
-
-            <p class="description">
-                Woody, spicy, aromatic and masculine fragrance.
-            </p>
-
-            <p class="price">
-                <span>Rs.</span> 1,500
-            </p>
-
-            <div class="product-buttons">
-
-                <button
-                    class="cart-btn"
-                    onclick="addToCart('Dark Desire',1500,'DARK.jpeg')">
-                    ADD TO CART
-                </button>
-
-                <a
-                    class="order-btn"
-                    target="_blank"
-                    href="https://wa.me/923357654140?text=Hello%20H.Scent,%20I%20want%20to%20order%20Dark%20Desire">
-                    ORDER
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-  
-  <!-- REVIEWS -->
-
-<section class="section" id="reviews">
-
-    <div class="section-label">
-        CUSTOMER REVIEWS
-    </div>
-
-    <h2 class="section-title">
-        What Our Customers Say
-    </h2>
-
-    <div class="gold-line"></div>
-
-    <div class="review-row">
-
-        <div class="review-card">
-            <div class="stars">★★★★★</div>
-            <h3>Amazing Fragrance</h3>
-            <p>
-                The fragrance is amazing and long lasting.
-                Really loved the quality.
-            </p>
-            <strong>— Ahmed</strong>
-        </div>
-
-        <div class="review-card">
-            <div class="stars">★★★★★</div>
-            <h3>Very Premium</h3>
-            <p>
-                Beautiful packaging and a premium fragrance.
-                Highly recommended.
-            </p>
-            <strong>— Hamza</strong>
-        </div>
-
-        <div class="review-card">
-            <div class="stars">★★★★★</div>
-            <h3>Loved It</h3>
-            <p>
-                Dark and elegant scent. Definitely buying
-                again from H.Scent.
-            </p>
-            <strong>— Usman</strong>
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ABOUT -->
-
-<section class="about" id="about">
-
-    <div class="section">
-
-        <div class="about-content">
-
-            <div class="section-label">
-                THE H.SCENT EXPERIENCE
-            </div>
-
-            <h2>
-                Luxury That Leaves
-                <span>An Impression</span>
-            </h2>
-
-            <div class="gold-line"></div>
-
-            <p>
-                At H.Scent, we believe a fragrance is more than just a scent.
-                It is a reflection of your personality, confidence and unique style.
-            </p>
-
-            <p>
-                Our premium fragrances are carefully selected for people who
-                appreciate luxury, elegance and quality.
-            </p>
-
-            <div class="features">
-
-                <div class="feature">
-                    <strong>01</strong>
-                    <span>Premium Quality</span>
-                </div>
-
-                <div class="feature">
-                    <strong>02</strong>
-                    <span>Luxury Fragrances</span>
-                </div>
-
-                <div class="feature">
-                    <strong>03</strong>
-                    <span>Made To Impress</span>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- CONTACT -->
-
-<section class="contact" id="contact">
-
-    <div class="section-label">
-        GET IN TOUCH
-    </div>
-
-    <h2>
-        Find Your Signature Scent
-    </h2>
-
-    <p>
-        Ready to discover your next favourite fragrance?
-        Order directly through WhatsApp.
-    </p>
-
-    <a
-        class="btn btn-gold"
-        target="_blank"
-        href="https://wa.me/923357654140?text=Hello%20H.Scent,%20I%20want%20to%20place%20an%20order">
-        ORDER ON WHATSAPP
-    </a>
-
-</section>
-  
-<!-- ================= CUSTOMER REVIEWS ================= -->
-
-<section class="reviews section" id="reviews">
-
-    <div class="section-label">
-        CUSTOMER LOVE
-    </div>
-
-    <h2 class="section-title">
-        What Our Customers Say
-    </h2>
-
-    <div class="gold-line"></div>
-
-    <div class="review-row">
-
-        <div class="review-card">
-            <div class="stars">★★★★★</div>
-            <h3>Excellent Fragrance</h3>
-            <p>
-                Amazing fragrance and beautiful packaging.
-                The scent is long lasting and premium.
-            </p>
-            <strong>— H.Scent Customer</strong>
-        </div>
-
-        <div class="review-card">
-            <div class="stars">★★★★★</div>
-            <h3>Very Premium</h3>
-            <p>
-                Loved the quality and presentation.
-                Definitely feels like a luxury perfume.
-            </p>
-            <strong>— H.Scent Customer</strong>
-        </div>
-
-        <div class="review-card">
-            <div class="stars">★★★★★</div>
-            <h3>Highly Recommended</h3>
-            <p>
-                Beautiful fragrance and excellent service.
-                I will definitely order again.
-            </p>
-            <strong>— H.Scent Customer</strong>
-        </div>
-
-    </div>
-
-</section>
-
-<!-- CART -->
-
-<div class="cart-panel" id="cartPanel">
-
-    <div class="cart-header">
-
-        <h2>Your Cart</h2>
-
-        <button class="close-cart" onclick="closeCart()">
-            ×
-        </button>
-
-    </div>
-
-    <div id="cartItems"></div>
-
-    <div class="cart-total">
-        Total: Rs. <span id="cartTotal">0</span>
-    </div>
-
-    <button class="checkout" onclick="checkoutWhatsApp()">
-        ORDER CART ON WHATSAPP
-    </button>
-
-</div>
-
-
-<!-- FOOTER -->
-
-<footer>
-
-    <div class="footer-name">
-        H.SCENT
-    </div>
-
-    <p>
-        Luxury Fragrances • Made to Impress
-    </p>
-
-    <div class="social-links">
-
-        <a
-            href="https://www.instagram.com/h.perfume123/"
-            target="_blank">
-            Instagram
-        </a>
-
-        <a
-            href="https://wa.me/923357654140"
-            target="_blank">
-            WhatsApp
-        </a>
-
-    </div>
-
-    <p class="copyright">
-        © 2026 H.Scent — All Rights Reserved
-    </p>
-
-</footer>
-
-
-<script>
-
-/* ================= PROFESSIONAL CART ================= */
-
-let cart = [];
-
-
-/* ADD PRODUCT */
-
-function addToCart(name, price, image){
-
-    const existing = cart.find(item => item.name === name);
-
-    if(existing){
-
-        existing.quantity++;
-
-    }else{
-
-        cart.push({
-            name: name,
-            price: price,
-            image: image,
-            quantity: 1
-        });
-
-    }
-
-    updateCart();
-    openCart();
-}
-
-
-/* UPDATE CART */
-
-function updateCart(){
-
-    const cartCount = document.getElementById("cartCount");
-    const cartItems = document.getElementById("cartItems");
-    const cartTotal = document.getElementById("cartTotal");
-
-    let totalItems = 0;
-    let totalPrice = 0;
-
-    cartItems.innerHTML = "";
-
-    if(cart.length === 0){
-
-        cartItems.innerHTML = `
-            <div style="
-                text-align:center;
-                padding:50px 10px;
-                color:#888;
-            ">
-                <div style="font-size:45px;">🛒</div>
-
-                <h3 style="
-                    color:#d4af37;
-                    margin:15px 0 8px;
-                ">
-                    Your Cart is Empty
-                </h3>
+                <div class="gold-line"></div>
 
                 <p>
-                    Add your favourite H.Scent fragrance.
+                    H.Scent is a fragrance brand created for those who
+                    believe that a perfume is more than just a fragrance.
+                    It is a reflection of personality, confidence,
+                    elegance and individuality.
                 </p>
-            </div>
-        `;
 
-    }
+                <p>
+                    Our vision is to bring together beautiful fragrances
+                    and a premium experience that makes every moment
+                    memorable. Each fragrance is selected with attention
+                    to character, quality and the impression it leaves.
+                </p>
 
+                <p>
+                    From bold and mysterious notes to elegant and refined
+                    aromas, H.Scent offers fragrances for different
+                    personalities and different moments of life.
+                </p>
 
-    cart.forEach((item, index) => {
+                <p>
+                    We believe that the right fragrance can become part
+                    of your identity — something people remember even
+                    after you have left the room.
+                </p>
 
-        totalItems += item.quantity;
+                <p>
+                    At H.Scent, our purpose is simple:
+                    <strong>
+                        to bring confidence, elegance and individuality
+                        to every fragrance we offer.
+                    </strong>
+                </p>
 
-        totalPrice += item.price * item.quantity;
-
-
-        cartItems.innerHTML += `
-
-            <div class="cart-item">
-
-                <img
-                    src="${item.image}"
-                    alt="${item.name}"
-                >
-
-                <div class="cart-item-info">
-
-                    <h4>${item.name}</h4>
-
-                    <p>
-                        Rs. ${item.price.toLocaleString()}
-                    </p>
-
-
-                    <div style="
-                        display:flex;
-                        align-items:center;
-                        gap:8px;
-                        margin-top:8px;
-                    ">
-
-                        <button
-                            onclick="decreaseQuantity(${index})"
-                            style="
-                                width:28px;
-                                height:28px;
-                                border:1px solid #d4af37;
-                                background:#111;
-                                color:#d4af37;
-                                border-radius:50%;
-                                cursor:pointer;
-                            ">
-                            −
-                        </button>
-
-
-                        <span style="
-                            min-width:20px;
-                            text-align:center;
-                        ">
-                            ${item.quantity}
-                        </span>
-
-
-                        <button
-                            onclick="increaseQuantity(${index})"
-                            style="
-                                width:28px;
-                                height:28px;
-                                border:1px solid #d4af37;
-                                background:#111;
-                                color:#d4af37;
-                                border-radius:50%;
-                                cursor:pointer;
-                            ">
-                            +
-                        </button>
-
-                    </div>
-
-
-                    <button
-                        class="remove"
-                        onclick="removeItem(${index})">
-                        Remove
-                    </button>
-
-                </div>
+                <p>
+                    H.Scent — A fragrance made to leave an impression.
+                </p>
 
             </div>
 
-        `;
+        </div>
 
-    });
+    </section>
 
 
-    cartCount.innerText = totalItems;
+    <!-- ================= PERFUMES ================= -->
 
-    cartTotal.innerText =
-        totalPrice.toLocaleString();
+    <section class="perfumes" id="perfumes">
 
-}
+        <h2 class="section-title">
+            Our <span>Perfumes</span>
+        </h2>
 
+        <div class="perfume-grid">
 
-/* INCREASE */
+            <!-- BLOOM WHISPER -->
 
-function increaseQuantity(index){
+            <div class="perfume">
 
-    cart[index].quantity++;
+                <img src="BLOOM WHISPER.jpeg"
+                     alt="Bloom Whisper">
 
-    updateCart();
-}
+                <h3>Bloom Whisper</h3>
 
+                <p class="perfume-description">
+                    Elegant, fresh and beautiful fragrance.
+                </p>
 
-/* DECREASE */
+                <p class="price">
+                    Rs. 1,500
+                </p>
 
-function decreaseQuantity(index){
+                <a class="order-btn"
+                   href="https://wa.me/923357654140?text=Hello%20H.Scent,%20I%20want%20to%20order%20Bloom%20Whisper"
+                   target="_blank">
+                    Order Now
+                </a>
 
-    if(cart[index].quantity > 1){
+            </div>
 
-        cart[index].quantity--;
 
-    }else{
+            <!-- MOON BLOSSOM -->
 
-        cart.splice(index, 1);
+            <div class="perfume">
 
-    }
+                <img src="MOON BLOSSOM.jpeg"
+                     alt="Moon Blossom">
 
-    updateCart();
-}
+                <h3>Moon Blossom</h3>
 
+                <p class="perfume-description">
+                    Bold, mysterious and unforgettable fragrance.
+                </p>
 
-/* REMOVE */
+                <p class="price">
+                    Rs. 2,500
+                </p>
 
-function removeItem(index){
+                <a class="order-btn"
+                   href="https://wa.me/923357654140?text=Hello%20H.Scent,%20I%20want%20to%20order%20Moon%20Blossom"
+                   target="_blank">
+                    Order Now
+                </a>
 
-    cart.splice(index, 1);
+            </div>
 
-    updateCart();
-}
 
+            <!-- BLACK LEGACY -->
 
-/* OPEN CART */
+            <div class="perfume">
 
-function openCart(){
+                <img src="BLACK.jpeg"
+                     alt="Black Legacy">
 
-    document
-        .getElementById("cartPanel")
-        .classList.add("active");
-}
+                <h3>Black Legacy</h3>
 
+                <p class="perfume-description">
+                    Woody, spicy, aromatic and masculine fragrance.
+                </p>
 
-/* CLOSE CART */
+                <p class="price">
+                    Rs. 1,500
+                </p>
 
-function closeCart(){
+                <a class="order-btn"
+                   href="https://wa.me/923357654140?text=Hello%20H.Scent,%20I%20want%20to%20order%20Black%20Legacy"
+                   target="_blank">
+                    Order Now
+                </a>
 
-    document
-        .getElementById("cartPanel")
-        .classList.remove("active");
-}
+            </div>
 
 
-/* ================= WHATSAPP CHECKOUT ================= */
+            <!-- DARK DESIRE -->
 
-function checkoutWhatsApp(){
+            <div class="perfume">
 
-    if(cart.length === 0){
+                <img src="DARK.jpeg"
+                     alt="Dark Desire">
 
-        alert("Your cart is empty.");
+                <h3>Dark Desire</h3>
 
-        return;
-    }
+                <p class="perfume-description">
+                    Woody, spicy, aromatic and masculine fragrance.
+                </p>
 
+                <p class="price">
+                    Rs. 1,500
+                </p>
 
-    let message =
-        "Hello H.Scent,%0A%0A" +
-        "I want to order:%0A%0A";
+                <a class="order-btn"
+                   href="https://wa.me/923357654140?text=Hello%20H.Scent,%20I%20want%20to%20order%20Dark%20Desire"
+                   target="_blank">
+                    Order Now
+                </a>
 
+            </div>
 
-    let total = 0;
+        </div>
 
+    </section>
 
-    cart.forEach(item => {
 
-        const itemTotal =
-            item.price * item.quantity;
+    <!-- ================= CONTACT ================= -->
 
-        total += itemTotal;
+    <section class="contact" id="contact">
 
+        <h2>Contact H.Scent</h2>
 
-        message +=
-            "• " +
-            item.name +
-            " x" +
-            item.quantity +
-            " — Rs. " +
-            itemTotal.toLocaleString() +
-            "%0A";
+        <p>📍 II Chundrigar Road, Karachi, Pakistan</p>
 
-    });
+        <p>
+            Instagram:
+            @h.perfume123
+        </p>
 
+        <p>
+            WhatsApp:
+            +92 335 7654140
+        </p>
 
-    message +=
-        "%0A--------------------%0A" +
-        "Total: Rs. " +
-        total.toLocaleString() +
-        "%0A%0A" +
-        "Thank you — H.Scent";
+    </section>
 
 
-    window.open(
-        "https://wa.me/923357654140?text=" + message,
-        "_blank"
-    );
+    <!-- ================= FOOTER ================= -->
 
-}
+    <footer>
 
+        <p>
+            © 2026 <span>H.Scent</span>.
+            All Rights Reserved.
+        </p>
 
-/* ================= SEARCH ================= */
+        <p>
+            Luxury Fragrances • Elegance • Confidence
+        </p>
 
-function searchProducts(){
-
-    let search =
-        document
-        .getElementById("searchInput")
-        .value
-        .toLowerCase();
-
-    let products =
-        document.querySelectorAll(".perfume");
-
-    products.forEach(product=>{
-
-        let name =
-            product
-            .getAttribute("data-name")
-            .toLowerCase();
-
-        if(name.includes(search)){
-
-            product.style.display = "";
-
-        }else{
-
-            product.style.display = "none";
-        }
-
-    });
-}
-
-</script>
+    </footer>
 
 </body>
 </html>
